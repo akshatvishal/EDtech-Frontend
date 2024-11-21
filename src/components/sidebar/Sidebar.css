@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.sidebar {
+    width: 250px; /* Set the width of the sidebar */
+    height: 100vh; /* Make it take full height of the screen */
+    background-color: #2d55b1; /* Sidebar background color */
+    color: white; /* Text color inside the sidebar */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; /* Space out sections */
+    padding-top: 20px; /* Add some padding to the top */
+    z-index: 100; /* Make sure it stays on top of other elements */
+  }
+  
+  .sidebar img {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 30px;
+  }
+  
+  /* Channels section in the sidebar */
+  .channels {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2rem;
+  }
+  
+  .channels h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for each individual channel */
+  .channel {
+    font-size: 16px;
+    margin-bottom:0px;
+    cursor: pointer;
+    padding: 25px 5px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect for the channels */
+  .channel:hover {
+      background-color: #23428b;
+    }
+    
+    /* Styling for the profile section at the bottom */
+    .profile {
+      padding: 20px;
+      background-color: #23428b;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  /* Media query for responsive layout (if screen size is less than 768px) */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 200px; /* Slightly reduce the sidebar width */
+    }
+    .profile {
+      font-size: 12px; /* Make text smaller on smaller screens */
+    }
+  }
+  

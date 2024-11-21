@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.app-container{
+    display: flex;
+}
+.content {
+    flex: 1; /* Take up remaining space */
+    background-color: #fff; /* Main content background */
+    overflow: auto; /* Scroll if content overflows */
+  }
