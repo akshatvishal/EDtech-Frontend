@@ -52,6 +52,10 @@ function SignInUpForm() {
         const setItem = localStorage.setItem("userID",JSON.stringify(data.user._id))
         localStorage.setItem("userID", JSON.stringify(data.user._id));
         localStorage.setItem("userName", data.user.userName);
+        localStorage.setItem("email", data.user.email);
+        localStorage.setItem("role", data.user.role);
+        localStorage.setItem("preference", data.user.preferences);
+        // localStorage.setItem('authToken', token);
         setName(data.user.userName);
         console.log(setItem)
         navigate('/Home');

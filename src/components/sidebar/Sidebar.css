@@ -18,7 +18,6 @@
     width: 80%;
     margin: 0 auto;
     display: block;
-    margin-bottom: 30px;
   }
   
   /* Channels section in the sidebar */
@@ -68,4 +67,15 @@
       font-size: 12px; /* Make text smaller on smaller screens */
     }
   }
-  
+  .pfp{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 1rem;
+  }
+  .lets-go{
+    height: 2rem;
+    max-width: 2rem;
+    padding: 0.3rem;
+  }
