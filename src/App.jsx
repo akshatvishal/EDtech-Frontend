@@ -16,6 +16,7 @@ import Neet from "./components/Neet/Neet";
 import Upsc from "./components/Upsc/Upsc";
 import Community from "./components/community/Community";
 import Profile from "./components/profile/Profile"; 
+import Chatbot from "./components/Chatbot/Chatbot.jsx";
 
 
 
@@ -43,6 +44,7 @@ function AppContent() {
             </Routes>
           </div>
         </div>
+        {<Chatbot />}
     </DataProvider>
     </FieldProvider>
     
