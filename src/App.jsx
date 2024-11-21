@@ -8,8 +8,8 @@ import {
   useLocation
 } from "react-router-dom";
 import "./App.css";
-import Sidebar from "./components/Sidebar/Sidebar";
 import Home from "./components/Home/Home";
+import Sidebar from "./components/sidebar/Sidebar";
 import { DataProvider ,FieldProvider } from "./Context/userContext";
 import Jee from "./components/jee/Jee";
 import Neet from "./components/Neet/Neet";

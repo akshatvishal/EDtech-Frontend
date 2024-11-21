@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.Nav{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+.dropdown{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+.Nav {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  .dropdown {
+    display: flex;
+    gap: 20px; /* Adds space between the two dropdowns */
+    align-items: center;
+  }
+  
+  select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    background-color: #fff;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  select:focus {
+    border-color: #007bff; /* Blue border when focused */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Focus effect */
+  }
+  .new{
+    background-color: #3CACFE;
+    border: none;
+    border-radius: 0.3rem;
+    padding: 1rem 2rem;
+  }
+
+
+  select option {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  
