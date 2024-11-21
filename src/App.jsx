@@ -8,13 +8,14 @@ import {
   useLocation
 } from "react-router-dom";
 import "./App.css";
-import Home from "./components/Home/Home";
 import Sidebar from "./components/sidebar/Sidebar";
+import Home from "./components/Home/Home";
 import { DataProvider ,FieldProvider } from "./Context/userContext";
 import Jee from "./components/jee/Jee";
 import Neet from "./components/Neet/Neet";
 import Upsc from "./components/Upsc/Upsc";
 import Community from "./components/community/Community";
+import Profile from "./components/profile/Profile"; 
 
 
 
@@ -38,6 +39,7 @@ function AppContent() {
               <Route path="/Neet" element={<Neet />} />
               <Route path="/Upsc" element={<Upsc />} />
               <Route path="/Community" element={<Community />} />
+              <Route path="/profile" element={<Profile />} />
             </Routes>
           </div>
         </div>

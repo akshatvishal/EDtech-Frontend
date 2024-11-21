@@ -4,23 +4,13 @@ import "./Navbar.css";
 function Community() {
   const [selectedOption, setSelectedOption] = useState(""); // State for the selected value
   const [isModalOpen, setIsModalOpen] = useState(false); // State for modal visibility
-  const id = JSON.parse(localStorage.getItem("userID"));
+  const owner = JSON.parse(localStorage.getItem("userID"));
+  const userName= localStorage.getItem("userName");
   const createdAt = new Date().toISOString();  // Current time in ISO format
   const [postDetails, setPostDetails] = useState({
     caption: "",
-    owner:{
-        id,
-    },
+    owner,
     tags: [], 
-    likes:[],
-    createdAt,
-    comments: [
-        {
-            "comment": "Hello nice",
-            "_id": "673f56f6e179e340489e6d2f",
-            "commentedAt": "2024-11-21T15:51:18.919Z"
-        }
-    ],
 
   }); // State for post details
 
@@ -28,7 +18,7 @@ function Community() {
   const createPost = async (postDetails) => {
     try {
       const response = await fetch(
-        "https://ed-tech-backend-t5i5.onrender.com/api/posts",
+        "https://ed-tech-backend-t5i5.onrender.com/posts",
         {
           method: "POST",
           headers: {

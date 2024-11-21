@@ -3,6 +3,7 @@ import peerly from "./assets/Peerly.png";
 import "./Sidebar.css";
 import { Datacontext, fieldcontext } from "../../Context/userContext";
 import { useNavigate } from "react-router-dom";
+import button from './assets/send button.png'
 
 function Sidebar() {
   const { setfield } = useContext(fieldcontext);
@@ -63,8 +64,13 @@ function Sidebar() {
 
       {/* Community Section */}
       <div className="channel" onClick={()=>handleNavigation("/Community","community")}>Community</div>
-      <div className="profile">
-        {userName ? `Hello, ${userName}` : "Welcome, Guest"}
+      <div className="profile" onClick={()=>handleNavigation("/profile","profile")}>
+        <span className="pfp">
+          {userName ? `Hello, ${userName}` : "Welcome, Guest"}
+          <img src={button} className="lets-go"></img>
+
+          </span>
+        
       </div>
     </div>
   );
