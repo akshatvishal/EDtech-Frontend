@@ -8,7 +8,7 @@ import {
   useLocation
 } from "react-router-dom";
 import "./App.css";
-import Sidebar from "./components/Sidebar/Sidebar";
+import Sidebar from "./components/sidebar/Sidebar";
 import Home from "./components/Home/Home";
 import { DataProvider ,FieldProvider } from "./Context/userContext";
 import Jee from "./components/jee/Jee";
