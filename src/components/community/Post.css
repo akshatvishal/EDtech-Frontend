@@ -6,5 +6,15 @@
     padding: 2rem;
     border: 2px solid black;
     border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
     margin-top: 0.5rem;
+}
+.report{
+    color: red;
+    transition: 0.6s ease;
+}
+.report:hover{
+    color: gray;
+    cursor: pointer;
 }

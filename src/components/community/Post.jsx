@@ -6,6 +6,7 @@ function Post({ inside }) { // Accept props and destructure 'inside'
     <div>
       <div className="container">
         <p className="inside">{inside}</p> {/* Use the 'inside' prop */}
+        <p className='report'>Report</p>
       </div>
     </div>
   );
