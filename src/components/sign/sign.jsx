@@ -3,6 +3,7 @@ import * as Component from '../sign/component';
 import '../sign/sign.css';
 import { useNavigate } from 'react-router-dom';
 import { Datacontext } from '../../Context/userContext';
+import axios from 'axios';
 
 function SignInUpForm() {
   const {userName} =useContext(Datacontext);
@@ -68,6 +69,38 @@ function SignInUpForm() {
       console.error("Error signing in:", error);
     }
   };
+
+
+//   const handleSignIn = async (event) => {
+//     event.preventDefault();
+//     try {
+//         const response = await axios.post(
+//             "https://ed-tech-backend-t5i5.onrender.com/auth/login", // Adjust endpoint as needed
+//             { email: signinEmail, password: signinPassword },
+//             { withCredentials: true } // Enable cookies for cross-origin requests
+//         );
+        
+//         const data = response.data;
+//         if (response.status === 200) {
+//             console.log("Sign-in successful:", data);
+            
+//             // Store user details in localStorage
+//             localStorage.setItem("userID", data.user._id);
+//             localStorage.setItem("userName", data.user.userName);
+//             localStorage.setItem("email", data.user.email);
+//             localStorage.setItem("role", data.user.role);
+//             localStorage.setItem("preference", data.user.preferences);
+            
+//             // Update context and navigate to home
+//             setName(data.user.userName);
+//             navigate('/Home');
+//         } else {
+//             console.error("Sign-in failed:", data.message);
+//         }
+//     } catch (error) {
+//         console.error("Error signing in:", error.response?.data?.message || error.message);
+//     }
+// };
 
 
   return (

@@ -21,38 +21,31 @@ function Jee() {
   }, []);
 
   // Fetch existing messages from the backend
- // Fetch existing messages from the backend with polling for real-time updates
-useEffect(() => {
-  const fetchMessages = async () => {
-    if (!userId) {
-      console.log("User ID is not available.");
-      return;
-    }
-
-    try {
-      const response = await fetch(`https://ed-tech-backend-t5i5.onrender.com/api/messages/${field}`);
-      const data = await response.json();
-      console.log("Fetched data:", data);
-
-      if (data.success && Array.isArray(data.messages)) {
-        setMessages(data.messages); // Corrected from data.message to data.messages
-      } else {
-        console.error("Unexpected API response structure:", data);
+  useEffect(() => {
+    const fetchMessages = async () => {
+      if (!userId) {
+        console.log("User ID is not available.");
+        return;
       }
-    } catch (error) {
-      console.error("Error fetching messages:", error);
-    }
-  };
 
-  // Set up polling for real-time updates
-  const intervalId = setInterval(fetchMessages, 3000); // Poll every 3 seconds
+      try {
+        const response = await fetch(`https://ed-tech-backend-t5i5.onrender.com/api/messages/${field}`);
+        const data = await response.json();
+        console.log("Fetched data:", data);
 
-  // Fetch immediately on component mount
+        if (data.success && Array.isArray(data.messages)) {
+          setMessages(data.messages);  // Corrected from data.message to data.messages
+        } else {
+          console.error("Unexpected API response structure:", data);
+        }
+      } catch (error) {
+        console.error("Error fetching messages:", error);
+      }
+    };
+
   fetchMessages();
+}, [userId,field]);  // Re-run when userId changes
 
-  // Cleanup interval on component unmount
-  return () => clearInterval(intervalId);
-}, [userId, field]); // Re-run when userId or field changes
 
 
   // Send a single chat message to the backend

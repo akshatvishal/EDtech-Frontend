@@ -4,26 +4,24 @@ import "./Navbar.css";
 function Community() {
   const [selectedOption, setSelectedOption] = useState(""); // State for the selected value
   const [isModalOpen, setIsModalOpen] = useState(false); // State for modal visibility
-  const owner = JSON.parse(localStorage.getItem("userID"));
-  const userName= localStorage.getItem("userName");
-  const createdAt = new Date().toISOString();  // Current time in ISO format
+  const owner = localStorage.getItem("userID");
   const [postDetails, setPostDetails] = useState({
     caption: "",
     owner,
-    tags: [], 
-
+    tags: [],
   }); // State for post details
 
   // Create Post function for sending data to the backend
   const createPost = async (postDetails) => {
     try {
       const response = await fetch(
-        "https://ed-tech-backend-t5i5.onrender.com/posts",
+        "https://ed-tech-backend-t5i5.onrender.com/posts/create",
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
+          credentials: "include", // Include cookies in the request
           body: JSON.stringify(postDetails),
         }
       );
@@ -31,8 +29,8 @@ function Community() {
       if (response.ok) {
         console.log("Post created successfully");
       } else {
-        console.log(postDetails);
-        console.error("Failed to create post:", await response.text());
+        const errorText = await response.text();
+        console.error("Failed to create post:", errorText);
       }
     } catch (error) {
       console.error("Error creating post:", error);
@@ -67,11 +65,11 @@ function Community() {
   const handleInputChange = (event) => {
     const { name, value } = event.target;
 
-    // If the field is 'tags', prepend '#' to the selected value and store as an array
     if (name === "tags" && value) {
+      // If the field is 'tags', prepend '#' to the selected value and store as an array
       setPostDetails((prevDetails) => ({
         ...prevDetails,
-        [name]: [`#${value}`], // Store tags as an array
+        [name]: [`#${value}`],
       }));
     } else {
       setPostDetails((prevDetails) => ({
@@ -118,7 +116,11 @@ function Community() {
                 <select
                   id="tags"
                   name="tags"
-                  value={postDetails.tags[0] ? postDetails.tags[0].replace("#", "") : ""} // Remove the '#' for display
+                  value={
+                    postDetails.tags[0]
+                      ? postDetails.tags[0].replace("#", "")
+                      : ""
+                  } // Remove the '#' for display
                   onChange={handleInputChange}
                   required
                 >
