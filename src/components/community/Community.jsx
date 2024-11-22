@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Post from "./Post";
 import "./Navbar.css";
 
 function Community() {
@@ -140,6 +141,11 @@ function Community() {
           </div>
         </div>
       )}
+     <Post inside="This is the first dynamic post content!" />
+     <Post inside="Here's another message for the Preely community! 💡" />
+     <Post inside="Got a tough question? Peerly's got the answers! Dive into a pool of shared knowledge and solve your doubts effortlessly. 🧠💡" />
+     <Post inside="From math equations to science projects, Peerly is your go-to homework buddy. Start learning smarter today! 🚀📚" />
+
     </div>
   );
 }
