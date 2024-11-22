@@ -11,21 +11,22 @@
 .messaging{
     position: relative;
     display: flex;
-    border: 2px solid;
     justify-content: center;
-    height: 90vh;
+    box-shadow: inset 1px 2px 12px rgba(0, 0, 0, 0.319);
+    height: 80vh;
     width: 100%;
     bottom: 0rem;
-    overflow: hidden;
+    overflow: auto;
     margin: 1rem;
     border-radius: 2rem;
+    
 }
 .texting {
     display: flex;
     height: 3.8rem;
     justify-content: flex-end;  /* Ensure the input and button stick to the bottom */
-    width: 100%;
-    position: absolute;
+    width: 72rem;
+    position: fixed;
     bottom: 1rem;  /* Slight margin from the bottom */
     margin: 1rem;
     border-radius: 2rem;
@@ -53,7 +54,39 @@
     transition: background-color 0.3s;
   }
   .chats{
-    border: 2px solid;
-    bottom: 8rem;
-    right: 2rem;
+    padding: 0.5rem;
+  }
+  .chat-messages{
+    position: relative;
+    width: 100%;
+  }
+  .right{
+    text-align: end;
+    display:block;
+  }
+  .right .username{
+    padding: 1rem;
+    display:block;
+  }
+  .right .message{
+    background-color: #007bff;
+    padding: 0.7rem 2rem;
+    border-radius: 2rem;
+    color: white;
+    display: inline-block;
+  }
+  .left{
+    text-align: start;
+    display:block;
+  }
+  .left .username{
+    padding: 1rem;
+    display:block;
+  }
+  .left .message{
+    background-color: #9b9b9b;
+    padding: 0.7rem 1.5rem;
+    border-radius: 2rem;
+    color: white;
+    display: inline-block;
   }

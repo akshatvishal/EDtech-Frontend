@@ -44,19 +44,19 @@ function Sidebar() {
       <div className="channels">
         <div
           className="channel"
-          onClick={() => handleNavigation("/Jee", "jee")}
+          onClick={() => handleNavigation("/Jee", "JEE")}
         >
           JEE
         </div>
         <div
           className="channel"
-          onClick={() => handleNavigation("/Neet", "neet")}
+          onClick={() => handleNavigation("/Neet", "NEET")}
         >
           Neet
         </div>
         <div
           className="channel"
-          onClick={() => handleNavigation("/Upsc", "upsc")}
+          onClick={() => handleNavigation("/Upsc", "UPSC")}
         >
           Upsc
         </div>

@@ -1,0 +1,88 @@
+/* Home.css */
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    overflow: hidden;
+  }
+  
+  .home-container {
+    max-width: 1200px;
+    position: relative;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  .header {
+    text-align: center;
+    background-color: #2a9d8f;
+    color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .team-name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .tagline {
+    font-size: 1.25rem;
+    margin-top: 0;
+  }
+  
+  .hola {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .team-intro {
+    margin-bottom: 2rem;
+  }
+  
+  .team-intro h2 {
+    font-size: 2rem;
+    color: #264653;
+    margin-bottom: 1rem;
+  }
+  
+  .team-intro p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .team-members h3 {
+    font-size: 1.8rem;
+    color: #e76f51;
+    margin-bottom: 0.5rem;
+  }
+  
+  .team-members ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .team-members li {
+    font-size: 1.2rem;
+    color: #555;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .team-members li:last-child {
+    border-bottom: none;
+  }
+  .hand{
+    width: 13rem;
+    position: absolute;
+  }

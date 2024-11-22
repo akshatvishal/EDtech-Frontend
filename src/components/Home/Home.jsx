@@ -1,41 +1,40 @@
-import React from 'react'
-import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
-    Navigate,
-  } from "react-router-dom"
-  import Sidebar from '../Sidebar/Sidebar'
-  import * as Component from "../components"
-
-
-
-
+import React from "react";
+import "./Home.css"; // Assuming you have a CSS file for styling
+import plane from "./PlaneLoop.gif"
 
 function Home() {
-
-
-
-
   return (
-    <>
-      <Component.contain style={{ padding: '1rem', maxWidth: '1200px', margin: '0 auto' }}>
-       
-        <h1>Welcome to the Home Page</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium est explicabo,
-          tempora impedit animi quibusdam commodi assumenda ducimus dolore blanditiis, magni iste
-          illum nulla suscipit voluptas sapiente accusantium repellendus atque, nesciunt officia omnis
-          hic? Officia iure ullam illo aut inventore ea, sed ipsum nostrum fugiat repudiandae,
-          accusantium eaque sunt magni perspiciatis possimus numquam incidunt quibusdam corporis
-          architecto! At optio iure inventore? Atque veritatis facilis similique sit, repellendus eos
-          voluptates dolores, esse minus ut tenetur possimus alias, voluptatum asperiores quisquam magnam
-          dolorem necessitatibus error sequi eligendi ipsa aut. Iste quae quos sed recusandae non dolores
-          eveniet nulla odit eius commodi. Corporis.
+    <div className="home-container">
+      <header className="header">
+        <h1 className="team-name">Welcome to Version Control Squad</h1>
+        <p className="tagline">
+          A passionate team working together to build incredible projects!
         </p>
-      </Component.contain>
-    </>
-  )
+      </header>
+
+      <main className="hola">
+        <section className="team-intro">
+          <h2>Meet Our Team</h2>
+          <p>
+            We are a team of enthusiastic developers and problem solvers, striving to
+            create impactful solutions. Each of us brings unique strengths and
+            perspectives to the table, making us stronger together.
+          </p>
+        </section>
+
+        <section className="team-members">
+          <h3>Our Team Members</h3>
+          <ul>
+            <li>Pranay Srivastava</li>
+            <li>Akshat Vishal</li>
+            <li>Ankit Kumar</li>
+            <li>Rachit Daksh</li>
+          </ul>
+        </section>
+      </main>
+      <img src={plane} alt="" className="hand"/>
+    </div>
+  );
 }
 
-export default Home
+export default Home;
